@@ -1,0 +1,121 @@
+
+<div class="container p-3" >
+    <div class="card" >
+        <h5 class="card-header">USUARIOS REGISTRADOS</h5>
+        <div class="card-body"  >
+          
+  
+          <div class="container ">
+  
+            <div class="container" style="  height: 400px; overflow-y: scroll;">
+            <table class="table"  >
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Contraseña</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                  <tr *ngFor="let usuario of Usuarios">
+                    <td> {{usuario.IdUsuario}} </td>
+                    <td>{{usuario.Nombre}}</td>
+                    <td>{{usuario.Telefono}}</td>
+                    <td> {{usuario.Correo}} </td>
+                    <td>{{usuario.Contrasena}}</td>
+                  </tr>
+                
+                  
+                </tbody>
+              </table>
+            </div>
+            
+            
+            </div>
+  
+            
+  
+        </div>
+    </div>
+    </div>
+
+
+    <div class="container p-3">
+      <div class="card" >
+        <h5 class="card-header">AGREGAR USUARIO</h5>
+        <div class="card-body " style="text-align:center;">
+  
+          <form  (submit)="AgregarUsuario()">
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <input type="text" [(ngModel)]="user.nombreu" name="nombre" class="form-control" placeholder="Nombre" required autofocus>
+              </div>
+              <div class="form-group col-md-4">
+                <input type="text" [(ngModel)]="user.telefonou" name="telefono" class="form-control" placeholder="Telefono" required autofocus>
+              </div>
+              <div class="form-group col-md-4">
+                <input type="text" [(ngModel)]="user.correou" name="correo" class="form-control" placeholder="Correo" required autofocus>
+              </div>
+              <div class="form-group col-md-4">
+                <input type="password" [(ngModel)]="user.contrau" name="contraseña" class="form-control" placeholder="Contraseña" required autofocus>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary text-align-center">Registrar</button>  
+              </div> 
+            </div> 
+          </form>
+  
+  
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-3">
+      <div class="card" >
+        <h5 class="card-header">ACTUALIZAR TELEFONO USUARIO</h5>
+        <div class="card-body " style="text-align:center;">
+  
+          <form  (submit)="ActualizarUsuario()">
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <input type="text" [(ngModel)]="put.telefonop" name="nombreput" class="form-control" placeholder="Nuevo numero telefonico" required autofocus>
+              </div>
+              <div class="form-group col-md-4">
+                <input type="text" [(ngModel)]="put.idusuariop" name="telefonoput" class="form-control" placeholder="Id del usuario" required autofocus>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary text-align-center">Actualizar numero telefonico</button>  
+              </div> 
+            </div> 
+          </form>
+  
+  
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container p-3">
+      <div class="card" >
+        <h5 class="card-header">ELIMINAR USUARIO</h5>
+        <div class="card-body " style="text-align:center;">
+  
+          <form  (submit)="EliminarUsuario()">
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <input type="text" [(ngModel)]="delete.idusuariod" name="ideliminar" class="form-control" placeholder="Id del usuario a eliminar" required autofocus>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary text-align-center">Eliminar Usuario</button>  
+              </div> 
+            </div> 
+          </form>
+  
+  
+        </div>
+      </div>
+    </div>
