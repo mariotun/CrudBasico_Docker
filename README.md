@@ -1,4 +1,4 @@
-#Proyecto web basico utilizando contenedores
+# Proyecto web basico utilizando contenedores
 - Ubuntu
 
 ## NodeJS y MySQL:
@@ -6,7 +6,7 @@
 - sudo docker-compose up 
 
 
-##Angular:
+## Angular:
 ### Comando para compilar el proyecto 
 - ng build --prod 
 ### Comando para construir el contenedor
